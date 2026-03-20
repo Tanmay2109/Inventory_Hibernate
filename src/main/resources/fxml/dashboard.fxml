@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane fx:id="root"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.inventory.ui.DashboardController">
+
+    <!-- LEFT MENU -->
+    <left>
+        <VBox spacing="15" style="-fx-padding:20; -fx-background-color:#020617;">
+            <Button text="Dashboard" onAction="#showDashboard"/>
+            <Button text="Products" onAction="#showProducts"/>
+            <Button text="Reports" onAction="#showReports"/>
+        </VBox>
+    </left>
+
+</BorderPane>

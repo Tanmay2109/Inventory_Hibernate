@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.chart.PieChart?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.inventory.ui.DashboardViewController"
+      alignment="CENTER"
+      spacing="25"
+      style="-fx-background-color:#0f172a;">
+
+    <Label text="Dashboard"
+           style="-fx-text-fill:white; -fx-font-size:24;"/>
+
+    <!-- STATS -->
+    <HBox spacing="30" alignment="CENTER">
+
+        <VBox alignment="CENTER">
+            <Label text="Total Products" style="-fx-text-fill:white;"/>
+            <Label fx:id="totalProducts" style="-fx-text-fill:#38bdf8; -fx-font-size:18;"/>
+        </VBox>
+
+        <VBox alignment="CENTER">
+            <Label text="Total Stock" style="-fx-text-fill:white;"/>
+            <Label fx:id="totalStock" style="-fx-text-fill:#4ade80; -fx-font-size:18;"/>
+        </VBox>
+
+        <VBox alignment="CENTER">
+            <Label text="Low Stock" style="-fx-text-fill:white;"/>
+            <Label fx:id="lowStock" style="-fx-text-fill:#f87171; -fx-font-size:18;"/>
+        </VBox>
+
+    </HBox>
+
+    <!-- CHART -->
+    <PieChart fx:id="pieChart" prefWidth="400"/>
+
+</VBox>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.inventory.ui.ProductController"
+      alignment="CENTER"
+      spacing="20"
+      style="-fx-padding:30; -fx-background-color:#0f172a;">
+
+    <Label text="Product Management"
+           style="-fx-text-fill:white; -fx-font-size:20;"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="nameField" promptText="Name"/>
+        <TextField fx:id="priceField" promptText="Price"/>
+        <TextField fx:id="stockField" promptText="Stock"/>
+
+        <Button text="Add" onAction="#add"/>
+        <Button text="Update" onAction="#update"/>
+        <Button text="Delete" onAction="#delete"/>
+        <Button text="Sell" onAction="#sell"/>
+    </HBox>
+
+    <StackPane alignment="CENTER">
+        <TableView fx:id="table" prefWidth="700" prefHeight="350">
+            <columns>
+                <TableColumn fx:id="nameCol" text="Name" prefWidth="230"/>
+                <TableColumn fx:id="priceCol" text="Price" prefWidth="200"/>
+                <TableColumn fx:id="stockCol" text="Stock" prefWidth="200"/>
+            </columns>
+        </TableView>
+    </StackPane>
+
+</VBox>
